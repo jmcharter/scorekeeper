@@ -21,13 +21,15 @@ var scoreinput = document.getElementById('scoreinput');
 //Capture buttons from HTML and store in variables
 var p1button = document.getElementById('p1button');
 var p2button = document.getElementById('p2button');
+var scoreplus = document.getElementById('scoreplus');
+var scoreminus = document.getElementById('scoreminus');
 var reset = document.getElementById('reset');
 
 
 //Function to determine if a player has won and colour their score green accordingly
 var winner = function(score, player){
     if (score === maxscore) {
-        player.style.color = "green";
+        player.classList.add("winner")
     }
 };
 
@@ -49,12 +51,26 @@ p2button.addEventListener("click", function(){
     }
 });
 
-//If the user amends the default score, set new maxscore accordingly
-scoreinput.addEventListener("input", function(){
-    maxscore = Number(scoreinput.value);
+
+//Increment maxscore on click
+scoreplus.addEventListener("click", function(){
+    maxscore++;
     document.getElementById('playingto').innerHTML = maxscore;
+    scoreDisplay.p1.classList.remove("winner");
+    scoreDisplay.p2.classList.remove("winner");
 
 });
+
+//Decrement maxscore on click
+scoreminus.addEventListener("click", function(){
+    if (maxscore > P1 && maxscore > P2) {
+        maxscore--;
+        document.getElementById('playingto').innerHTML = maxscore;
+        scoreDisplay.p1.classList.remove("winner");
+        scoreDisplay.p2.classList.remove("winner");
+    }
+});
+
 
 //Reset everything back to initial values
 reset.addEventListener("click", function(){
@@ -64,8 +80,8 @@ reset.addEventListener("click", function(){
     P2 = 0;
     scoreDisplay.p1.innerHTML = P1;
     scoreDisplay.p2.innerHTML = P2;
-    scoreDisplay.p1.style.color = "black";
-    scoreDisplay.p2.style.color = "black";
+    scoreDisplay.p1.classList.remove("winner");
+    scoreDisplay.p2.classList.remove("winner");
     scoreinput.value = "";
 
 });
