@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+.winner {
+    color: green;
+}
+
 .navigation {
     margin: 0;
     padding: 0;
@@ -34,8 +38,17 @@ body {
 }
 
 .container > * {
-  padding: 10px;
-  flex: 1 100%;
+    font-size: 1.5em;
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.container h1 {
+    font-size: 3em;
+}
+
+.container h2 {
+    font-size: 2em;
 }
 
 .header {
@@ -78,6 +91,8 @@ body {
         display: block;
         width: 100%;
     }
+
+
 }
 
 @media all and (min-width:800px); {
