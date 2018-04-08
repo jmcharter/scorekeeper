@@ -59,6 +59,14 @@ body {
     text-decoration: none;
 }
 
+.buttons button:active {
+    outline: none;
+}
+
+.buttons button:focus {
+    outline: none;
+}
+
 #scoreinput {
     border: 1px solid black;
 }
