@@ -63,7 +63,7 @@ scoreplus.addEventListener("click", function(){
 
 //Decrement maxscore on click
 scoreminus.addEventListener("click", function(){
-    if (maxscore > P1 && maxscore > P2) {
+    if (maxscore > P1+1 && maxscore > P2+1) {
         maxscore--;
         document.getElementById('playingto').innerHTML = maxscore;
         scoreDisplay.p1.classList.remove("winner");
