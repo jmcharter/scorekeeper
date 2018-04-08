@@ -85,21 +85,3 @@ body {
 #scoreinput {
     border: 1px solid black;
 }
-
-
-@media all and (min-width:600px); {
-    .pbutton {
-        /*flex: 0 0 50%;*/
-        /*display: block;*/
-        /*width: 100%;*/
-        min-width: 0px;
-        flex-wrap: nowrap;
-        flex-shrink: 1;
-    }
-
-
-}
-
-@media all and (min-width:800px); {
-    /*.pbutton {flex: 1 auto;}*/
-}
