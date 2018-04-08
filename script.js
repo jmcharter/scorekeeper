@@ -16,7 +16,7 @@ var scoreDisplay = {
 };
 
 //Takes user input from maxscore form, to overide maxscore variable
-var scoreinput = document.getElementById('maxscore');
+var scoreinput = document.getElementById('scoreinput');
 
 //Capture buttons from HTML and store in variables
 var p1button = document.getElementById('p1button');
@@ -60,10 +60,10 @@ scoreinput.addEventListener("input", function(){
 reset.addEventListener("click", function(){
     maxscore = 5;
     document.getElementById('playingto').innerHTML = maxscore;
-    P1ScoreDisplay = 0;
-    P2ScoreDisplay = 0;
-    scoreDisplay.p1.innerHTML = P1ScoreDisplay;
-    scoreDisplay.p2.innerHTML = P2ScoreDisplay;
+    P1 = 0;
+    P2 = 0;
+    scoreDisplay.p1.innerHTML = P1;
+    scoreDisplay.p2.innerHTML = P2;
     scoreDisplay.p1.style.color = "black";
     scoreDisplay.p2.style.color = "black";
     scoreinput.value = "";
