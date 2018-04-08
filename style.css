@@ -33,14 +33,12 @@ body {
     display: flex;
     text-align: center;
     margin: 0 25%;
-    justify-content: flex-start;
-    flex-flow: column;
+    flex-flow: column nowrap;
 }
 
 .container > * {
     font-size: 1.5em;
     padding: 2px;
-    flex: 1 100%;
 }
 
 .container h1 {
@@ -56,8 +54,10 @@ body {
 
 }
 
-.buttons {
-    margin: auto;
+.buttons{
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: center;
 }
 
 .buttons button {
@@ -70,6 +70,8 @@ body {
     background: #3498db;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
+    min-width: 0px;
+    flex-flow: row nowrap;
 }
 
 .buttons button:active {
@@ -87,14 +89,17 @@ body {
 
 @media all and (min-width:600px); {
     .pbutton {
-        flex: 50% auto;
-        display: block;
-        width: 100%;
+        /*flex: 0 0 50%;*/
+        /*display: block;*/
+        /*width: 100%;*/
+        min-width: 0px;
+        flex-wrap: nowrap;
+        flex-shrink: 1;
     }
 
 
 }
 
 @media all and (min-width:800px); {
-    .pbutton {flex: 1 auto;}
+    /*.pbutton {flex: 1 auto;}*/
 }
